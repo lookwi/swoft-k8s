@@ -33,5 +33,9 @@ spec: # 指定该资源的内容
             - name: http
               containerPort: 18306 #容器开发对外的端口
           volumeMounts: #挂载持久存储卷
-            - name: data
+            - name: data-k8s
               mountPath: /data/
+      volumes:
+        - name: data-k8s
+          persistentVolumeClaim:
+            claimName: data
