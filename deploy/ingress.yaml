@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: php-k8s-swoole
   annotations:
+    kubernetes.io/ingress.class: "nginx"
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:

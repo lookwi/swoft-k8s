@@ -5,10 +5,15 @@ metadata:
   labels:
     app: swoole-app
 spec:
-  type: LoadBalancer
+  #type: LoadBalancer
   ports:
     - port: 80
+      name: http
       targetPort: 18306
       protocol: TCP
+  #    - port: 443
+  #      name: https
+  #      targetPort: 18306
+  #      protocol: TCP
   selector:
     app: swoole-app

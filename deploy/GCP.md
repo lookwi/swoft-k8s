@@ -26,7 +26,7 @@
     ### 4. 转到部署代码目录
     
     ```$xslt
-    cd swoft-k8s
+    cd swoft-k8s/deploy
     WORKING_DIR=$(pwd)
     ``` 
     
@@ -57,6 +57,9 @@ kubectl replace -f $WORKING_DIR/swoole_deployment.yaml
 kubectl describe pod swoole-app
 # 查看 部署状态
 kubectl get pod -l app=swoole-app --watch
+
+
+
 # 部署 swoole 服务
 kubectl create -f $WORKING_DIR/swoole_services.yaml
 kubectl replace -f $WORKING_DIR/swoole_services.yaml
