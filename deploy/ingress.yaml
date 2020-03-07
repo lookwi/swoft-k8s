@@ -1,15 +1,12 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: laravel-kubernetes-demo-ingress
+  name: php-k8s-swoole
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:
-  backend:
-    serviceName: default-http-server
-    servicePort: 80
   rules:
-    - host: "qq.xswl.gq"
+    - host: "*"
       http:
         paths:
           - path: /

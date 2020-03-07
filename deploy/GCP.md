@@ -76,6 +76,7 @@ swoole-svc   LoadBalancer   10.0.7.196   外部地址   80:30375/TCP   11m
 
 ```angular2html
 kubectl apply -f $WORKING_DIR/ingress.yaml
+kubectl describe ingress laravel-kubernetes-demo-ingress
 ```
 
 
