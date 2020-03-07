@@ -59,6 +59,7 @@ kubectl describe pod swoole-app
 kubectl get pod -l app=swoole-app --watch
 # 部署 swoole 服务
 kubectl create -f $WORKING_DIR/swoole_services.yaml
+kubectl replace -f $WORKING_DIR/swoole_services.yaml
 kubectl apply -f $WORKING_DIR/swoole_services.yaml
 # 查看 swoole 服务并等待分配外部地址
 kubectl get svc -l app=swoole-app --watch
@@ -69,6 +70,15 @@ kubectl get svc -l app=swoole-app --watch
 NAME         TYPE           CLUSTER-IP   EXTERNAL-IP     PORT(S)        AGE
 swoole-svc   LoadBalancer   10.0.7.196   外部地址   80:30375/TCP   11m
 ```
+
+
+## Ingress 
+
+```angular2html
+kubectl apply -f $WORKING_DIR/ingress.yaml
+```
+
+
 ## 扩容
 
 ```angular2html
