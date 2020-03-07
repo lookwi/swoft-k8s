@@ -5,7 +5,7 @@ metadata:
   labels:
     app: swoole-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 18306

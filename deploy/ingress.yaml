@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: php-k8s
+  name: laravel-kubernetes-demo-ingress
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -9,7 +9,7 @@ spec:
     serviceName: default-http-server
     servicePort: 80
   rules:
-    - host: *
+    - host: "*"
       http:
         paths:
           - path: /
