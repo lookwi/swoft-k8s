@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: Swoole-svc
   labels:
-    app: swooleApp
+    app: swoole-app
 spec:
   type: LoadBalancer
   ports:
@@ -11,4 +11,4 @@ spec:
       targetPort: 18306
       protocol: TCP
   selector:
-    app: swooleApp
+    app: swoole-app
