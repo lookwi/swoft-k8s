@@ -3,16 +3,13 @@ kind: ConfigMap
 metadata:
   name: nginx-config
   labels:
-    tier: backend
+    tier: swoole-svc
 data:
   config: |
     server {
       index index.php index.html;
-      error_log  /var/log/nginx/error.log;
-      access_log /var/log/nginx/access.log;
-
-      root /data;
+      root /data/swoft;
       location / {
-          proxy_pass http://swooleApp:8080;
+          proxy_pass http://swoole-svc.default.svc.cluster.local:80;
       }
     }

@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: swoft-k8s
   name: nginx
   labels:
-    tier: swooleApp
+    tier: swoole-app
 spec:
   replicas: 1 # 部署实例
   selector:
     matchLabels:
       app: nginx
-      tier: swooleApp
+      tier: swoole-app
   template:
     metadata:
       labels:
         app: nginx
-        tier: swooleApp
+        tier: swoole-app
     spec:
       containers:
         - name: nginx

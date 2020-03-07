@@ -81,13 +81,13 @@ Run curl -sS https://getcomposer.org/installer | php \
     && echo "[Date]\ndate.timezone=${TIMEZONE}" > /usr/local/etc/php/conf.d/timezone.ini
 
 # Install composer deps
-ADD . /var/www/swoft
-RUN  cd /var/www/swoft \
+ADD ../app /data/swoft
+RUN  cd /data/swoft \
     && composer install \
     && composer clearcache
 
-WORKDIR /var/www/swoft
+WORKDIR /data/swoft
 EXPOSE 18306 18307 18308
 
-# ENTRYPOINT ["php", "/var/www/swoft/bin/swoft", "http:start"]
-CMD ["php", "/var/www/swoft/bin/swoft", "http:start"]
+# ENTRYPOINT ["php", "/data/swoft/bin/swoft", "http:start"]
+CMD ["php", "/data/swoft/bin/swoft", "http:start"]

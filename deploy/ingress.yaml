@@ -1,6 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
+  namespace: swoft-k8s
   name: php-k8s-swoole
   annotations:
     kubernetes.io/ingress.class: "nginx"
@@ -12,5 +13,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: swoole-svc
+              serviceName: nginx
               servicePort: 80
