@@ -9,7 +9,7 @@ spec:
     serviceName: default-http-server
     servicePort: 80
   rules:
-    - host: "*"
+    - host: "qq.xswl.gq"
       http:
         paths:
           - path: /
