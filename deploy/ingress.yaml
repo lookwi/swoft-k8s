@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: php-k8s
@@ -9,8 +9,8 @@ spec:
     serviceName: default-http-server
     servicePort: 80
   rules:
-    - host: test.xswl.gq
-    - http:
+    - host: *
+      http:
         paths:
           - path: /
             backend:
