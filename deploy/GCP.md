@@ -51,17 +51,17 @@ kubectl apply -f $WORKING_DIR/volume.yaml
 ```$xslt
 kubectl create -f $WORKING_DIR/swoole_deployment.yaml
 # 查看 部署状态
-kubectl get pod -l app=swooleApp --watch
+kubectl get pod -l app=swoole-app --watch
 # 部署 swoole 服务
 kubectl create -f $WORKING_DIR/swoole_services.yaml
 # 查看 swoole 服务并等待分配外部地址
-kubectl get svc -l app=swooleApp --watch
+kubectl get svc -l app=swoole-app --watch
 
 ```
 
 ```$xslt
 NAME        CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
-swooleApp   10.51.243.233   外部地址    80:32418/TCP   1m
+swoole-app   10.51.243.233   外部地址    80:32418/TCP   1m
 ```
 
 
