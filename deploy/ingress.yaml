@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Ingress
 metadata:
-  name: phpk8s
+  name: php-k8s
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:
