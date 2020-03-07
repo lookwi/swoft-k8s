@@ -16,7 +16,7 @@ spec: # 指定该资源的内容
     spec:
       containers:
         - name: swooleApp #容器的名字
-          image: app/swooleApp #容器使用的镜像地址
+          image: swoft/swoft #容器使用的镜像地址
           env: #指定容器中的环境变量
             - name: DB_HOST #变量的名字
               value: "127.0.0.1" #变量的值
