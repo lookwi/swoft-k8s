@@ -31,7 +31,7 @@ spec: # 指定该资源的内容
           #            periodSeconds: 15  #检查间隔时间
           ports:
             - name: http
-              containerPort: 80 #容器开发对外的端口
+              containerPort: 18306 #容器开发对外的端口
           volumeMounts: #挂载持久存储卷
             - name: data-k8s
               mountPath: /data/
