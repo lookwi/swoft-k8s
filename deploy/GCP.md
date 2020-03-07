@@ -12,6 +12,9 @@
     ### 2. 设置K8S集群容器地区
     ```$xslt
     gcloud config set compute/zone 地区编码
+    
+    asia-southeast1 新加坡
+    asia-east1 台湾
     ```
     
     ### 3. 拉取代码
@@ -26,6 +29,15 @@
     cd swoft-k8s
     WORKING_DIR=$(pwd)
     ``` 
+    
+    ### 5. 设置集群
+    ```
+    CLUSTER_NAME=swoft-k8s
+    gcloud container clusters create $CLUSTER_NAME \
+        --num-nodes=2 --enable-autoupgrade --no-enable-basic-auth \
+        --no-issue-client-certificate --enable-ip-alias --metadata \
+        disable-legacy-endpoints=true
+    ```
 
 
 ## 创建持久化磁盘
@@ -37,7 +49,7 @@ kubectl apply -f $WORKING_DIR/volume.yaml
 ## 部署Swoole
 
 ```$xslt
-kubectl create -f $WORKING_DIR/swoole_depolyment.yaml
+kubectl create -f $WORKING_DIR/swoole_deployment.yaml
 # 查看 部署状态
 kubectl get pod -l app=swooleApp --watch
 # 部署 swoole 服务
