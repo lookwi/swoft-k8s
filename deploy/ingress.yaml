@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: php-k8s
+spec:
+  backend:
+    serviceName: default-http-server
+    servicePort: 80
+  rules:
+    - host: swoole.domain
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: Swoole-svc
+              servicePort: 80
