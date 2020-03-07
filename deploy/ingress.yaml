@@ -7,10 +7,10 @@ spec:
     serviceName: default-http-server
     servicePort: 80
   rules:
-    - host: swoole.domain
+    - host: *
     - http:
         paths:
           - path: /
             backend:
-              serviceName: Swoole-svc
+              serviceName: swoole-svc
               servicePort: 80

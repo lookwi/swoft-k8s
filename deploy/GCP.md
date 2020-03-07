@@ -52,20 +52,34 @@ kubectl apply -f $WORKING_DIR/volume.yaml
 kubectl create -f $WORKING_DIR/swoole_deployment.yaml
 # 推荐使用
 kubectl apply -f $WORKING_DIR/swoole_deployment.yaml
+kubectl replace -f $WORKING_DIR/swoole_deployment.yaml
 # 出错，请查看 pod 是否正常
 kubectl describe pod swoole-app
 # 查看 部署状态
 kubectl get pod -l app=swoole-app --watch
 # 部署 swoole 服务
 kubectl create -f $WORKING_DIR/swoole_services.yaml
+kubectl apply -f $WORKING_DIR/swoole_services.yaml
 # 查看 swoole 服务并等待分配外部地址
 kubectl get svc -l app=swoole-app --watch
 
 ```
 
 ```$xslt
-NAME        CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
-swoole-app   10.51.243.233   外部地址    80:32418/TCP   1m
+NAME         TYPE           CLUSTER-IP   EXTERNAL-IP     PORT(S)        AGE
+swoole-svc   LoadBalancer   10.0.7.196   外部地址   80:30375/TCP   11m
+```
+## 扩容
+
+```angular2html
+kubectl scale deployment swoole-app --replicas 3
+```
+
+## 自动扩容
+```angular2html
+kubectl autoscale deployment nginx-deployment --min=10 --max=15 --cpu-percent=80
+
+kubectl get hpa
 ```
 
 

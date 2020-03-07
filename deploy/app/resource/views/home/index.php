@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Swoft Framework 2.0 - PHP microservices coroutine framework</title>
+  <title>Hello World</title>
   <style type="text/css">
     *,
     *::before,
@@ -253,10 +253,10 @@
 <div class="container">
   <nav class="top-nav ">
     <ul class="clearfix">
-      <li><a target="_blank"  href="https://github.com/swoft-cloud/swoft">Github</a></li>
-      <li><a target="_blank"  href="https://swoft.org/docs">Document</a></li>
-      <li><a target="_blank"  href="https://swoft.org/docs">Swoft.org</a></li>
-      <li><a target="_blank"  href="https://gitter.im/swoft-cloud/community">Gitter.im</a></li>
+      <li><a target="_blank" href="https://github.com/swoft-cloud/swoft">Github</a></li>
+      <li><a target="_blank" href="https://swoft.org/docs">Document</a></li>
+      <li><a target="_blank" href="https://swoft.org/docs">Swoft.org</a></li>
+      <li><a target="_blank" href="https://gitter.im/swoft-cloud/community">Gitter.im</a></li>
     </ul>
   </nav>
   <div class="main">
@@ -267,10 +267,10 @@
 </div>
 <nav class="foot-nav">
   <ul class="clearfix">
-    <li><a target="_blank"  href="https://github.com/swoft-cloud/swoft">Github</a></li>
-    <li><a target="_blank"  href="https://swoft.org/docs">Document</a></li>
-    <li><a target="_blank"  href="https://swoft.org/docs">Swoft.org</a></li>
-    <li><a target="_blank"  href="https://gitter.im/swoft-cloud/community">Gitter.im</a></li>
+    <li><a target="_blank" href="https://github.com/swoft-cloud/swoft">Github</a></li>
+    <li><a target="_blank" href="https://swoft.org/docs">Document</a></li>
+    <li><a target="_blank" href="https://swoft.org/docs">Swoft.org</a></li>
+    <li><a target="_blank" href="https://gitter.im/swoft-cloud/community">Gitter.im</a></li>
   </ul>
 </nav>
 </body>
