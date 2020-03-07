@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: nginx
   labels:
-    tier: backend
+    tier: swooleApp
 spec:
   replicas: 1 # 部署实例
   selector:
     matchLabels:
       app: nginx
-      tier: backend
+      tier: swooleApp
   template:
     metadata:
       labels:
         app: nginx
-        tier: backend
+        tier: swooleApp
     spec:
       volumes: #挂载
         - name: data

@@ -30,7 +30,8 @@ spec: # 指定该资源的内容
             timeoutSeconds: 5 #检测的超时时间
             periodSeconds: 15  #检查间隔时间
           ports:
-            - containerPort: 80  #容器开发对外的端口
+            - name: http
+              containerPort: 18306 #容器开发对外的端口
           volumeMounts: #挂载持久存储卷
             - name: data
               mountPath: /data/
