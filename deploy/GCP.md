@@ -50,10 +50,9 @@ kubectl apply -f $WORKING_DIR/volume.yaml
 
 ```$xslt
 kubectl create -f $WORKING_DIR/swoole_deployment.yaml
-
-kubectl replace -f $WORKING_DIR/swoole_deployment.yaml
-
-
+# 推荐使用
+kubectl apply -f $WORKING_DIR/swoole_deployment.yaml
+# 出错，请查看 pod 是否正常
 kubectl describe pod swoole-app
 # 查看 部署状态
 kubectl get pod -l app=swoole-app --watch
